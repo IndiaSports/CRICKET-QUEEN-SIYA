@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Pixel Code (keep original) -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2022271525363741');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2022271525363741&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SIYA · THE GOLDEN ARM · IPL 2026</title>
+    <!-- Tailwind (lite) + fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            min-height: 100vh;
+            background: #0c0b0e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat', sans-serif;
+            padding: 12px;
+            position: relative;
+        }
+
+        /* LUXURY VELVET + GOLD TEXTURE BACKGROUND */
+        .backdrop-luxury {
+            position: fixed;
+            inset: 0;
+            z-index: -2;
+            background: radial-gradient(circle at 30% 40%, #3a1f2b 0%, #1a0f14 50%, #0a0709 100%);
+        }
+
+        .gold-noise {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            opacity: 0.12;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJmIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjc0IiBudW1PY3RhdmVzPSIzIiAvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNmKSIgb3BhY2l0eT0iMC4yIiAvPjwvc3ZnPg==');
+            background-repeat: repeat;
+            pointer-events: none;
+        }
+
+        /* MAIN CARD – RUBY OVAL, DEEP CUT */
+        .gem-card {
+            max-width: 380px;
+            width: 100%;
+            background: rgba(22, 12, 18, 0.65);
+            backdrop-filter: blur(16px) saturate(180%);
+            -webkit-backdrop-filter: blur(16px) saturate(180%);
+            border: 1px solid rgba(212, 175, 55, 0.5); /* old gold */
+            border-radius: 48px 48px 48px 48px;
+            box-shadow: 0 40px 70px -10px rgba(110, 30, 60, 0.7), 0 0 0 1px rgba(255, 215, 0, 0.2) inset, 0 0 30px #d4af37;
+            padding: 28px 20px 24px 20px;
+            position: relative;
+            transition: box-shadow 0.4s;
+        }
+
+        .gem-card:hover {
+            box-shadow: 0 45px 80px -8px #b0306a, 0 0 0 2px rgba(255, 200, 50, 0.6) inset, 0 0 50px #ffb347;
+        }
+
+        /* unique corner emblems – regal */
+        .corner-stamp {
+            position: absolute;
+            width: 42px;
+            height: 42px;
+            border: 1.5px solid rgba(212, 175, 55, 0.5);
+            opacity: 0.7;
+            filter: drop-shadow(0 0 6px gold);
+        }
+        .corner-stamp.tl {
+            top: 8px; left: 8px;
+            border-right: none;
+            border-bottom: none;
+            border-radius: 18px 0 0 0;
+        }
+        .corner-stamp.br {
+            bottom: 8px; right: 8px;
+            border-left: none;
+            border-top: none;
+            border-radius: 0 0 18px 0;
+        }
+        .corner-stamp.tr {
+            top: 8px; right: 8px;
+            border-left: none;
+            border-bottom: none;
+            border-radius: 0 18px 0 0;
+        }
+        .corner-stamp.bl {
+            bottom: 8px; left: 8px;
+            border-right: none;
+            border-top: none;
+            border-radius: 0 0 0 18px;
+        }
+
+        /* profile sphere – now with ruby core */
+        .ruby-core {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 12px;
+            position: relative;
+            border-radius: 50%;
+            background: radial-gradient(circle at 40% 40%, #ffb6c1, #b0306a, #4a1a2c);
+            box-shadow: 0 0 30px 8px #d44c7a, 0 0 0 4px rgba(255, 215, 0, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ruby-core::after {
+            content: "";
+            position: absolute;
+            inset: -6px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 220, 100, 0.7);
+            opacity: 0.8;
+            filter: blur(2px);
+        }
+
+        .queen-img {
+            width: 104px;
+            height: 104px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #f5e56b;
+            box-shadow: 0 0 0 3px #9e2b5b, 0 0 30px #ffd700;
+            transform: scale(1.02);
+            transition: transform 0.3s ease;
+        }
+        .queen-img:hover {
+            transform: scale(1.06);
+            box-shadow: 0 0 40px #ff69b4, 0 0 0 3px #f5e56b;
+        }
+
+        .name-gold {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #f9e076, #dbb42c, #f9e076);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            line-height: 1.1;
+            text-shadow: 0 0 10px #b8860b, 0 0 30px #ff69b4;
+            letter-spacing: 2px;
+            margin-top: -4px;
+        }
+
+        .title-tag {
+            color: #f5b5c5;
+            font-size: 11px;
+            font-weight: 400;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            background: linear-gradient(145deg, #ffe5b4, #f2cd88);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 18px;
+        }
+
+        /* stat cards – like gold bars */
+        .stat-bar {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 40px;
+            padding: 10px 16px 10px 10px;
+            margin-bottom: 10px;
+            border: 1px solid rgba(212, 175, 55, 0.5);
+            backdrop-filter: blur(4px);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: 0.2s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+        }
+        .stat-bar:hover {
+            border-color: #ffd966;
+            background: rgba(70, 20, 40, 0.6);
+        }
+
+        .stat-icon {
+            width: 42px; height: 42px;
+            background: radial-gradient(circle, #ffd70020, #b0306a30);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #f5c542;
+            color: gold;
+        }
+
+        .stat-content h4 {
+            font-size: 14px;
+            font-weight: 700;
+            color: white;
+            letter-spacing: 0.5px;
+            margin-bottom: 2px;
+        }
+        .stat-content p {
+            font-size: 9px;
+            color: #f5c5b0;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        .badge-gold {
+            margin-left: auto;
+            background: rgba(212, 175, 55, 0.18);
+            border: 1px solid #f0c45a;
+            color: #ffe48f;
+            font-size: 9px;
+            font-weight: 800;
+            padding: 5px 8px;
+            border-radius: 30px;
+            backdrop-filter: blur(4px);
+            box-shadow: 0 0 6px #d4af37;
+        }
+        .badge-rose {
+            background: rgba(255, 105, 180, 0.18);
+            border: 1px solid #ff99cc;
+            color: #ffc0cb;
+        }
+        .badge-pulse {
+            background: rgba(180, 60, 100, 0.5);
+            border: 1px solid #ffd700;
+            animation: pulseGlow 1.8s infinite;
+        }
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 0 0 0 #ffd700; }
+            50% { box-shadow: 0 0 12px 3px #ff69b4; }
+            100% { box-shadow: 0 0 0 0 #ffd700; }
+        }
+
+        /* DIVIDER gold with ruby */
+        .divider-ruby {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 20px 0 16px;
+        }
+        .divider-line {
+            height: 2px;
+            flex: 1;
+            background: linear-gradient(90deg, transparent, #d4af37, #ff69b4, #d4af37, transparent);
+        }
+        .divider-icon {
+            color: #ffb6c1;
+            font-size: 12px;
+            filter: drop-shadow(0 0 6px #ff69b4);
+        }
+
+        /* MAIN BUTTON – MAHARAJAH STYLE */
+        .royal-btn {
+            background: linear-gradient(165deg, #a75c3b, #c28f4b, #efc46a, #d9a755);
+            border: none;
+            border-radius: 60px;
+            padding: 18px 18px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            font-weight: 900;
+            font-size: 16px;
+            letter-spacing: 2px;
+            color: #1e0c12;
+            text-transform: uppercase;
+            box-shadow: 0 10px 25px #b0306a, 0 0 30px #f5e56b, 0 2px 0 0 #ffe3a0 inset;
+            transition: all 0.25s;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .royal-btn::before {
+            content: "";
+            position: absolute;
+            top: -50%; left: -60%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.6) 0%, transparent 70%);
+            opacity: 0.4;
+            transform: rotate(25deg);
+            transition: 0.6s;
+        }
+
+        .royal-btn:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 18px 35px #b0306a, 0 0 60px gold, 0 4px 0 0 #fcedb2 inset;
+        }
+        .royal-btn:hover::before {
+            left: 100%;
+        }
+
+        /* fixed elements – reimagined w/ luxury */
+        #accuracyBadge {
+            position: fixed;
+            top: 20px; right: 20px;
+            padding: 8px 18px;
+            font-size: 11px;
+            font-weight: 700;
+            background: rgba(25, 10, 16, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid #f5e56b;
+            border-radius: 40px;
+            color: #ffeca6;
+            letter-spacing: 1.5px;
+            box-shadow: 0 0 20px #b0306a, 0 0 10px gold;
+            z-index: 1000;
+        }
+
+        #tgAutoBox {
+            position: fixed;
+            bottom: 22px; left: 50%;
+            transform: translateX(-50%);
+            background: rgba(16, 6, 12, 0.75);
+            backdrop-filter: blur(8px);
+            border: 1px solid #e5b13b;
+            border-radius: 60px;
+            padding: 10px 26px;
+            color: #ffdca8;
+            font-size: 14px;
+            font-weight: 500;
+            box-shadow: 0 0 35px #b0306a;
+            z-index: 9999;
+            white-space: nowrap;
+        }
+
+        #tgFloatBtn {
+            position: fixed;
+            top: 20px; left: 20px;
+            z-index: 10000;
+            display: none;
+            filter: drop-shadow(0 0 12px #d4af37);
+        }
+        #tgFloatBtn img {
+            width: 90px;
+            border-radius: 0;
+            transition: 0.2s;
+            border: 1px solid gold;
+            background: #200f18;
+            padding: 5px 10px;
+            border-radius: 60px;
+        }
+        #tgFloatBtn img:hover {
+            transform: scale(1.08) rotate(-2deg);
+            filter: brightness(1.2);
+        }
+
+        /* ultra compact & no overflow */
+        .no-scroll {
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+        }
+        .footer-note {
+            font-size: 6px;
+            color: #bba070;
+            letter-spacing: 2px;
+            margin-top: 12px;
+            text-align: center;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body class="no-scroll">
+
+    <!-- background layers -->
+    <div class="backdrop-luxury"></div>
+    <div class="gold-noise"></div>
+
+    <!-- main GEM card (unique shape) -->
+    <div class="gem-card">
+        <!-- royal corner stamps -->
+        <div class="corner-stamp tl"></div>
+        <div class="corner-stamp tr"></div>
+        <div class="corner-stamp bl"></div>
+        <div class="corner-stamp br"></div>
+
+        <!-- profile ruby core -->
+        <div class="ruby-core">
+            <img src="https://d1yei2z3i6k35z.cloudfront.net/13184094/69b31048a5c671.33478210_Gemini_Generated_Image_k9yjx1k9yjx1k9yj.png" alt="Queen Siya" class="queen-img">
+        </div>
+
+        <!-- name + tag -->
+        <h1 class="name-gold text-center">SIYA</h1>
+        <div class="title-tag text-center">THE GOLDEN ARM</div>
+
+        <!-- stats – gold bars -->
+        <div class="mt-2">
+            <div class="stat-bar">
+                <div class="stat-icon">🏆</div>
+                <div class="stat-content">
+                    <h4>IPL 2024 · 74/74</h4>
+                    <p>perfect coverage</p>
+                </div>
+                <span class="badge-gold">✓ COMPLETED</span>
+            </div>
+
+            <div class="stat-bar">
+                <div class="stat-icon">⚡</div>
+                <div class="stat-content">
+                    <h4>IPL 2025 · all passed</h4>
+                    <p>100% accurate tips</p>
+                </div>
+                <span class="badge-gold badge-rose">🔥 PASSED</span>
+            </div>
+
+            <div class="stat-bar">
+                <div class="stat-icon">⏳</div>
+                <div class="stat-content">
+                    <h4>IPL 2026 · LIVE SOON</h4>
+                    <p>fresh analysis / daily</p>
+                </div>
+                <span class="badge-gold badge-pulse">🌟 SOON</span>
+            </div>
+        </div>
+
+        <!-- ruby divider -->
+        <div class="divider-ruby">
+            <span class="divider-line"></span>
+            <span class="divider-icon">✦</span>
+            <span class="divider-line"></span>
+        </div>
+
+        <!-- call to action : royal button -->
+        <div class="text-center">
+            <p style="color:#f5b0c0; font-size:9px; letter-spacing:3px; margin-bottom:8px;">🔒 exclusive maharajah club</p>
+            <a href="https://t.me/+kJ6E9E2W7U4zY2Q1" target="_blank" class="royal-btn">
+                <span style="font-size:20px;">👑</span> join free telegram <span style="font-size:20px;">👑</span>
+            </a>
+            <p style="color:#dbb47a; font-size:8px; margin-top:8px;">match-winning insights · 98%+ accuracy</p>
+        </div>
+
+        <!-- micro footer inside card -->
+        <div class="footer-note">CRICKET ANALYTICS · GOLD SEAL</div>
+    </div>
+
+    <!-- fixed existing elements but styled premium -->
+
+    <!-- Accuracy Badge (redefined) -->
+    <div id="accuracyBadge">✦ 98.6% ACCURACY ✦</div>
+
+    <!-- Countdown box (telegram redirect) with new look -->
+    <div id="tgAutoBox">
+        ⏱️ ROYAL REDIRECT IN <span id="tgTime">10</span>s ⏱️
+    </div>
+
+    <!-- Floating telegram button (left) with new icon treatment -->
+    <a href="https://t.me/queen_siya" id="tgFloatBtn" target="_blank" rel="noopener noreferrer">
+        <img src="https://d1yei2z3i6k35z.cloudfront.net/13184094/69b88c60818264.84948507_20260313_165205.png" alt="JOIN TELEGRAM">
+    </a>
+
+    <!-- tiny particles: floating gold dust (keep but minimal) -->
+    <script>
+        (function() {
+            // show float btn
+            window.addEventListener("load", function() {
+                document.getElementById("tgFloatBtn").style.display = "block";
+            });
+
+            // countdown (same as original)
+            let time = 10;
+            setInterval(function() {
+                time--;
+                document.getElementById("tgTime").innerText = time;
+                if (time <= 0) {
+                    window.location.href = "https://t.me/+kJ6E9E2W7U4zY2Q1";
+                }
+            }, 1000);
+
+            // subtle floating orbs (minimal luxury)
+            for (let i = 0; i < 8; i++) {
+                let orb = document.createElement('div');
+                orb.style.position = 'fixed';
+                orb.style.width = (Math.random() * 3 + 1) + 'px';
+                orb.style.height = orb.style.width;
+                orb.style.background = i % 2 === 0 ? '#ffd700' : '#ffb6c1';
+                orb.style.borderRadius = '50%';
+                orb.style.bottom = Math.random() * 100 + '%';
+                orb.style.left = Math.random() * 100 + '%';
+                orb.style.boxShadow = '0 0 12px #ff69b4';
+                orb.style.opacity = '0.2';
+                orb.style.pointerEvents = 'none';
+                orb.style.zIndex = '9998';
+                orb.style.animation = `float ${Math.random() * 10 + 10}s infinite linear`;
+                document.body.appendChild(orb);
+            }
+        })();
+    </script>
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); }
+            100% { transform: translateY(-120vh) rotate(360deg); }
+        }
+    </style>
+</body>
+</html>
